@@ -45,3 +45,27 @@ commit changes with message
 ```bash
 git commit -m "first commit"
 ```
+
+chaining command
+
+```bash
+git add . && git commit -m "update README.md"
+```
+
+add github repository
+
+```bash
+git remote add origin https://github.com/Deji01/wineq.git
+```
+
+rename current branch name
+
+```bash
+git branch -M main
+```
+
+push changes
+
+```bash
+git push origin main
+```
