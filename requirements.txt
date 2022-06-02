@@ -2,3 +2,4 @@ dvc
 dvc[gdrive]
 sklearn
 streamlit
+pandas
