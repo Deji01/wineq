@@ -69,3 +69,9 @@ push changes
 ```bash
 git push origin main
 ```
+
+track stage
+
+```bash
+dvc repro
+```
