@@ -75,3 +75,13 @@ track stage
 ```bash
 dvc repro
 ```
+
+track metrics
+
+```bash
+dvc metrics show
+```
+
+```bash
+dvc metrics diff
+```
