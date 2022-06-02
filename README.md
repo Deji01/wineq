@@ -46,7 +46,7 @@ commit changes with message
 git commit -m "first commit"
 ```
 
-chaining command
+one-liner update for readme
 
 ```bash
 git add . && git commit -m "update README.md"
