@@ -33,3 +33,15 @@ track dataset on dvc
 ```bash
 dvc add data_given/wine_quality.csv
 ```
+
+add all changes made to the staging area
+
+```bash
+git add .
+```
+
+commit changes with message
+
+```bash
+git commit -m "first commit"
+```
