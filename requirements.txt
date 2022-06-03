@@ -5,8 +5,9 @@
 dvc
 dvc[gdrive]
 sklearn
-streamlit
 pandas
 pytest
 tox
 flake8
+flask
+gunicorn
