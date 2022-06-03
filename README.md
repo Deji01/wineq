@@ -85,3 +85,32 @@ dvc metrics show
 ```bash
 dvc metrics diff
 ```
+
+tests
+pytest command -
+
+```bash
+pytest -v
+```
+
+tox command -
+
+```bash
+tox
+```
+
+```bash
+tox -r
+```
+
+setup commands -
+
+```bash
+pip install -e .
+```
+
+build package commands -
+
+```bash
+python setup.py sdist bdist wheel
+```
