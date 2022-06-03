@@ -103,13 +103,13 @@ tox
 tox -r
 ```
 
-setup commands -
+setup command -
 
 ```bash
 pip install -e .
 ```
 
-build package commands -
+build package command -
 
 ```bash
 python setup.py sdist bdist wheel
