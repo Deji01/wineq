@@ -3,3 +3,5 @@ dvc[gdrive]
 sklearn
 streamlit
 pandas
+pytest
+tox
