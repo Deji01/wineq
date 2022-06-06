@@ -1,7 +1,4 @@
 import os
-import yaml
-import joblib
-import numpy as np
 from flask import Flask, render_template, request, jsonify
 from prediction_service import prediction
 
@@ -24,13 +21,13 @@ def index():
                 return render_template("index.html", response=response)
 
             elif request.json:
-                response = prediciton.api_response(request.json)
+                response = prediction.api_response(request.json)
                 return jsonify(response)
 
         except Exception as e:
             print(e)
-            # error = {"error": "Something went wrong!! Try again "}
-            return render_template("404.html", error=e)
+            error = {"error": e}
+            return render_template("404.html", error=error)
 
     else:
         return render_template("index.html")
