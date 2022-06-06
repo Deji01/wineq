@@ -79,13 +79,20 @@ def form_response(dict_request):
 def api_response(dict_request):
     try:
         if validate_input(dict_request):
-            data = np.array([list(request.values())])
+            data = np.array([list(dict_request.values())])
             response = predict(data)
             response = {"response": response}
             return response
+
+    except NotInRange as e:
+        response = {"the_exected_range": get_schema(), "response": str(e)}
+        return response
+
+    except NotInCols as e:
+        response = {"the_exected_cols": get_schema().keys(),
+                    "response": str(e)}
+        return response
+
     except Exception as e:
-        response = {
-            "expected range": get_schema(),
-            "response": str(e)
-        }
+        response = {"response": str(e)}
         return response
