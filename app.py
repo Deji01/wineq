@@ -3,7 +3,7 @@ import yaml
 import joblib
 import numpy as np
 from flask import Flask, render_template, request, jsonify
-from prediction_service import predicition
+from prediction_service import prediction
 
 webapp_root = "webapp"
 
@@ -12,6 +12,7 @@ template_dir = os.path.join(webapp_root, "templates")
 
 
 app = Flask(__name__, static_folder=static_dir, template_folder=template_dir)
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -25,7 +26,7 @@ def index():
             elif request.json:
                 response = prediciton.api_response(request.json)
                 return jsonify(response)
-            
+
         except Exception as e:
             print(e)
             # error = {"error": "Something went wrong!! Try again "}
